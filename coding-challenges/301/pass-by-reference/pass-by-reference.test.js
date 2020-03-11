@@ -8,13 +8,14 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = str => {
-  // Solution code here...
+  return str + " The end.";
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function that accepts an array and copies the first element to the end of the array. The change should be reflected in the source array that was passed in to the function. That is, the function should modify the array 'in place'.
+Write a function that accepts an array and copies the first element to the end of the array. The change should be reflected in the source array that
+was passed in to the function. That is, the function should modify the array 'in place'.
 
 Do not use a return statement.
 
@@ -25,13 +26,14 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = arr => {
-  // Solution code here...
+  arr.push(arr[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function that accepts an object and an integer as arguments and adds a new property to the object called yearBorn. The value of the yearBorn property should be the integer that was passed in.
+Write a function that accepts an object and an integer as arguments and adds a new property to the object called yearBorn. The value of the yearBorn property
+should be the integer that was passed in.
 
 The change should be reflected in the source object that was passed in to the function. That is, the function should modify the object 'in place'.
 
@@ -44,7 +46,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
-  // Solution code here...
+  Object.assign(obj, { yearBorn: year });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,7 +63,9 @@ console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
 const setStatusAsAuthor = people => {
-  // Solution code here...
+  people.forEach(person => {
+    Object.assign(person, { isAuthor: true });
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,7 +84,9 @@ console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
 const append = (arr1, arr2) => {
-  // Solution code here...
+  arr2.forEach(current => {
+    arr1.push(current);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
