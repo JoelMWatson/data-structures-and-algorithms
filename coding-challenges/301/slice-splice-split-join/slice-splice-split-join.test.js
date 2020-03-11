@@ -15,7 +15,9 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = str => {
   let result = [];
-  // Solution code here...
+  for (let i = 0; i <= str.length; i++) {
+    result.push(str.slice(i, str.length));
+  }
   return result;
 };
 
@@ -28,7 +30,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = arr => {
-  // Solution code here...
+  return arr.split("");
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,7 +38,8 @@ CHALLENGE 3
 
 You are making a grocery list for ingredients needed in the gruffalo crumble recipe, below. Rather than taking the entire recipe, you only want a list of the item names.
 
-Write a function named listFoods that takes in the recipe and returns a new array of the food items without any amount or units. Just the name. For example, '1 cup flour' will return 'flour'.
+Write a function named listFoods that takes in the recipe and returns a new array of the food items without any amount or units. Just the name. 
+For example, '1 cup flour' will return 'flour'.
 
 Use slice for this function, maybe more than once. The Array.indexOf() method may also be helpful.
 
@@ -73,7 +76,12 @@ const gruffaloCrumble = {
 
 const listFoods = recipe => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach(current => {
+    let index = current.indexOf(" ");
+    current = current.slice(index + 1, current.length);
+    index = current.indexOf(" ");
+    result.push(current.slice(index + 1, current.length));
+  });
   return result;
 };
 
@@ -87,7 +95,10 @@ You may also use other string or array methods.
 
 const splitFoods = recipe => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach(current => {
+    const words = current.split(" ");
+    result = result.concat(words.slice(2, current.length).join(" "));
+  });
   return result;
 };
 
@@ -96,14 +107,19 @@ CHALLENGE 5
 
 Use the same recipe from Challenge 3, above.
 
-Write a function named stepAction that takes in the recipe and extracts the action verbs from the steps. Fortunate for you, the action verbs are the first word of each action.
+Write a function named stepAction that takes in the recipe and extracts the action verbs from the steps. Fortunate for you, the action verbs are the 
+first word of each action.
 
 Return a new array containing just the verbs. For example, ['Mix until evenly distributed'] returns ['Mix'].
 ------------------------------------------------------------------------------------------------ */
 
 const stepActions = recipe => {
   let result = [];
-  // Solution code here...
+  recipe.steps.forEach(current => {
+    const words = current.split(" ");
+    words.splice(1);
+    result.push(words.join(" "));
+  });
   return result;
 };
 
@@ -121,13 +137,19 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = arr => {
-  // Solution code here...
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
 
-Write a function named removeLastCharacters that takes in a string and a number. The numberOfCharacters argument determines how many characters will be removed from the end of the string. Return the resulting string.
+Write a function named removeLastCharacters that takes in a string and a number. The numberOfCharacters argument determines how many characters 
+will be removed from the end of the string. Return the resulting string.
 
 If the numberOfCharacters argument is greater than the length of the input string, the function should return an empty string.
 
@@ -137,10 +159,17 @@ For example:
 removeLastCharacters('Gregor', 2) returns 'Greg'
 removeLastCharacters('Gregor', -2) returns 'Gregor'
 removeLastCharacters('Gregor', 9) returns ''
+
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  const strArr = str.split("");
+  strArr.splice(str.length - numberOfCharacters, numberOfCharacters);
+  let output = "";
+  strArr.forEach(current => {
+    output += current;
+  });
+  return output;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -151,7 +180,9 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 
 const totalSumCSV = str => {
   let total = 0;
-  // Solution code here...
+  str.split(",").forEach(current => {
+    total += parseInt(current);
+  });
   return total;
 };
 
@@ -164,13 +195,21 @@ For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
 const removeVowels = str => {
-  // Solution code here...
+  const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  const strArr = str.split("");
+  for (let i = 0; i < strArr.length; i++) {
+    if (vowels.includes(strArr[i])) {
+      strArr.splice(i, 1);
+    }
+  }
+  return strArr.join("");
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
 
-Write a function named extractVowels that takes in a string and returns an array where the first element is the original string with all the vowels removed, and the second element is a string of all the vowels that were removed, in alphabetical order.
+Write a function named extractVowels that takes in a string and returns an array where the first element is the original string 
+with all the vowels removed, and the second element is a string of all the vowels that were removed, in alphabetical order.
 
 For example, extractVowels('gregor') returns ['grgr', 'eo'].
 
@@ -178,7 +217,17 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 ------------------------------------------------------------------------------------------------ */
 
 const extractVowels = str => {
-  // Solution code here...
+  const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  const strArr = str.split("");
+  const removed = [];
+  for (let i = 0; i < strArr.length; i++) {
+    if (vowels.includes(strArr[i])) {
+      removed.push(strArr.splice(i, 1));
+      i--;
+    }
+  }
+  removed.sort();
+  return [strArr.join(""), removed.join("")];
 };
 
 /* ------------------------------------------------------------------------------------------------
