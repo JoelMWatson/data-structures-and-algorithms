@@ -3,9 +3,11 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
-You friend Pat has a chain of stores around the greater Seattle area. He specializes in selling salmon cookies. Pat has data for the hourly sales of cookies per hour for each store. He wants to create an array of the total number of cookies sold per hour for all of his stores combined.
+You friend Pat has a chain of stores around the greater Seattle area. He specializes in selling salmon cookies. Pat has data for the hourly 
+sales of cookies per hour for each store. He wants to create an array of the total number of cookies sold per hour for all of his stores combined.
 
-Write a function named grandTotal that adds up the cookies sales for each hour of operation for all of the stores combined. For example, the first element in the hourlySales array should be the sum of the cookies sold in the 9:00 a.m. hour at all five stores combined.
+Write a function named grandTotal that adds up the cookies sales for each hour of operation for all of the stores combined. For example, the 
+first element in the hourlySales array should be the sum of the cookies sold in the 9:00 a.m. hour at all five stores combined.
 
 For this example, the total at 9:00 a.m. is 17 + 26 + 7 + 5 + 33, or 88 total cookies.
 
@@ -36,7 +38,15 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = stores => {
-  // Solution code here...
+  const hourlySales = [];
+  hoursOpen.forEach((current, index) => {
+    let sum = 0;
+    cookieStores.forEach(current => {
+      sum += current[index];
+    });
+    hourlySales.push(sum);
+  });
+  return hourlySales;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,7 +60,13 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  const salesData = hours.map((current, index) => {
+    return {
+      sales: data[index] + " cookies",
+      time: current
+    };
+  });
+  return salesData;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -87,7 +103,7 @@ const errands = [
 ];
 
 const howManyTreats = arr => {
-  // Solution code here...
+  return arr[2].items[1].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -109,19 +125,30 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  if (board[row][col] === "#") {
+    return "hit";
+  } else {
+    return "miss";
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named calculateProduct that takes in a two-dimensional array of numbers, multiplies all of the numbers in each array, and returns the final product. This function should work for any number of inner arrays.
+Write a function named calculateProduct that takes in a two-dimensional array of numbers, multiplies all of the numbers in each array,
+and returns the final product. This function should work for any number of inner arrays.
 
 For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = numbers => {
-  // Solution code here...
+  let product = 1;
+  numbers.forEach(current => {
+    for (let i = 0; i < current.length; i++) {
+      product *= current[i];
+    }
+  });
+  return product;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -129,7 +156,8 @@ CHALLENGE 6
 
 Write a function named averageDailyTemperature that accepts a two-dimensional array representing average daily temperatures grouped week-by-week.
 
-Calculate the average daily temperature during that entire period. Your output should be a single number. Write your function so it could accept an array with any number of weeks given to it.
+Calculate the average daily temperature during that entire period. Your output should be a single number. Write your function so it could accept 
+an array with any number of weeks given to it.
 ------------------------------------------------------------------------------------------------ */
 
 // Real daily average temperatures for Seattle, October 1-28 2017
@@ -141,7 +169,15 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = weather => {
-  // Solution code here...
+  let sum = 0;
+  weeklyTemperatures.forEach(current => {
+    let weekSum = 0;
+    current.forEach(cur => {
+      weekSum += cur;
+    });
+    sum += weekSum / 7;
+  });
+  return sum / weeklyTemperatures.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -162,7 +198,18 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = weather => {
-  // Solution code here...
+  let lowest = 999;
+  weather.forEach(current => {
+    let weekly = 0;
+    current.forEach(cur => {
+      weekly += cur;
+    });
+    weekly /= 7;
+    if (weekly < lowest) {
+      lowest = weekly;
+    }
+  });
+  return lowest;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -178,7 +225,15 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = str => {
-  // Solution code here...
+  const output = [];
+  str.split("\n").forEach(current => {
+    let rowSum = 0;
+    current.split(",").forEach(cur => {
+      rowSum += parseInt(cur);
+    });
+    output.push(rowSum);
+  });
+  return output;
 };
 
 /* ------------------------------------------------------------------------------------------------
