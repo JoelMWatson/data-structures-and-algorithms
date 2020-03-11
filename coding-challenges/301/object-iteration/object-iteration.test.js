@@ -22,7 +22,7 @@ const courseInfo = {
 };
 
 const getCourseKeys = obj => {
-  // Solution code here...
+  return Object.keys(courseInfo);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -79,7 +79,9 @@ let characters = [
 
 const getHouses = arr => {
   let houses = [];
-  // Solution code here...
+  characters.forEach(current => {
+    houses.push(current.house);
+  });
   return houses;
 };
 
@@ -96,7 +98,14 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  let isTrue = false;
+  arr.forEach(person => {
+    const personValues = Object.values(person);
+    if (personValues[0] === character && personValues[2].length > 0) {
+      isTrue = true;
+    }
+  });
+  return isTrue;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,7 +117,14 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let isTrue = false;
+  arr.forEach(person => {
+    const personEntries = Object.entries(person);
+    if (personEntries[0][1] === character && personEntries[2][1].length > 0) {
+      isTrue = true;
+    }
+  });
+  return isTrue;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,7 +134,15 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = arr => {
-  // Solution code here...
+  let count = 0;
+  arr.forEach(current => {
+    count++;
+    if (current.spouse) {
+      count++;
+    }
+    count += current.children.length;
+  });
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -133,7 +157,14 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 
 const houseSize = arr => {
   const sizes = [];
-  // Solution code here...
+  arr.forEach(current => {
+    let count = 1;
+    if (current.spouse) {
+      count++;
+    }
+    count += current.children.length;
+    sizes.push({ house: current.house, members: count });
+  });
   return sizes;
 };
 
@@ -156,9 +187,16 @@ For example: [ { house: 'Stark', members: 6 }, { house: 'Arryn', members: 2 }, .
 const deceasedSpouses = ["Catelyn", "Lysa", "Robert", "Khal Drogo", "Alerie"];
 
 const houseSurvivors = arr => {
-  const survivors = [];
-  // Solution code here...
-  return survivors;
+  const sizes = [];
+  arr.forEach(current => {
+    let count = 1;
+    if (current.spouse && !deceasedSpouses.includes(current.spouse)) {
+      count++;
+    }
+    count += current.children.length;
+    sizes.push({ house: current.house, members: count });
+  });
+  return sizes;
 };
 
 /* ------------------------------------------------------------------------------------------------
