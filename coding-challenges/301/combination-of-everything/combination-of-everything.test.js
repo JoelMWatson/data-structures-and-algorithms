@@ -9,7 +9,9 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = arr => {
-  // Solution code here...
+  return arr.map(current => {
+    return current.charAt(0).toUpperCase() + current.substring(1);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -86,12 +88,22 @@ let starWarsData = [
 ];
 
 let biggerThanLuke = arr => {
-  // Solution code here...
+  const newArr = arr.filter(current => current.mass > 77);
+  let newStr = "";
+  newArr.forEach(current => {
+    if (newStr === "") {
+      newStr += current.name;
+    } else {
+      newStr += " - " + current.name;
+    }
+  });
+  return newStr;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
-Write a function named sortBy that takes in an array of objects, each of which has a particular property, and sorts those objects by that property, lowest to highest, returning the same array.
+Write a function named sortBy that takes in an array of objects, each of which has a particular property, and sorts those objects by that property, 
+lowest to highest, returning the same array.
 
 Here is an example of the input:
 [
@@ -104,7 +116,10 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    if (property === "name") return a[property] > b[property] ? 1 : -1;
+    if (property === "price") return a[property] - b[property];
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -120,17 +135,22 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = url => {
-  // Solution code here...
+  const regex = /^https:\/\//g;
+  return regex.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
 
-Write a function named detectTicTacToeWin that accepts a two-dimensional array of strings. Each string is guaranteed to be either "X", "O" or an empty string. Your function should check to see if any row, column, or either diagonal direction has three matching "X" or "O" symbols (non-empty strings), three-in-a-line.
+Write a function named detectTicTacToeWin that accepts a two-dimensional array of strings. Each string is guaranteed to be either 
+"X", "O" or an empty string. Your function should check to see if any row, column, or either diagonal direction has three matching 
+"X" or "O" symbols (non-empty strings), three-in-a-line.
 
 This function should return either true or false to indicate if someone won the game.
 
-Instead of trying to write crazy for loops to automate checking the rows, columns and diagonals consider writing one helper function that accepts three coordinate pairs and checks the values of the array at those locations. For instance helpCheck(row1, col1, row2, col2, row3, col3).
+Instead of trying to write crazy for loops to automate checking the rows, columns and diagonals consider writing one helper function 
+that accepts three coordinate pairs and checks the values of the array at those locations. 
+For instance helpCheck(row1, col1, row2, col2, row3, col3).
 
 Your function does not need to work for boards of any size other than 3x3.
 
@@ -142,10 +162,34 @@ Here is a sample board:
 ];
 ------------------------------------------------------------------------------------------------ */
 
-const detectTicTacToeWin = board => {
-  // Solution code here...
-};
+const values = { O: 1, X: -1, "": 0 };
+const detectTicTacToeWin = arr => {
+  for (var i = 0; i < 3; i++) {
+    var rowSum = 0;
+    for (var j = 0; j < 3; j++) {
+      rowSum += values[arr[i][j]];
+    }
+    if (rowSum === 3 || rowSum === -3) return true;
+  }
 
+  for (var i = 0; i < 3; i++) {
+    var colSum = 0;
+    for (var j = 0; j < 3; j++) {
+      colSum += values[arr[j][i]];
+    }
+    if (colSum === 3 || colSum === -3) return true;
+  }
+
+  if (values[arr[0][0]] + values[arr[1][1]] + values[arr[2][2]] === 3)
+    return true;
+  else if (values[arr[0][0]] + values[arr[1][1]] + values[arr[2][2]] === -3)
+    return true;
+  if (values[arr[2][0]] + values[arr[1][1]] + values[arr[0][2]] === 3)
+    return true;
+  else if (values[arr[2][0]] + values[arr[1][1]] + values[arr[0][2]] === -3)
+    return true;
+  return false;
+};
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
