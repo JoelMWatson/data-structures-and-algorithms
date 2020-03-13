@@ -7,7 +7,9 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = arr => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    return b - a;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,7 +23,7 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = arr => {
-  // Solution code here...
+  return arr.sort();
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,25 +33,31 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = arr => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    return a.length - b.length;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named alphabetizeBetter that takes in an array of strings and returns the same array, with the strings sorted alphabetically. Capitalization should not change the sort order of two strings.
+Write a function named alphabetizeBetter that takes in an array of strings and returns the same array, 
+with the strings sorted alphabetically. Capitalization should not change the sort order of two strings.
 
 For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, and so is ['alphabet', 'Alphabet', 'carrot', 'Zebra'].
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = arr => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named sortByPrice that takes in an array of objects, each of which has a 'price' property, and sorts those objects by price, lowest to highest, returning the same array.
+Write a function named sortByPrice that takes in an array of objects, each of which has a 'price' property, 
+and sorts those objects by price, lowest to highest, returning the same array.
 
 Here is an example of the input:
 [
@@ -60,7 +68,12 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = arr => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    if (a.price > b.price) {
+      return 1;
+    }
+    return -1;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,13 +85,18 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = arr => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    const strA = a + "";
+    const strB = b + "";
+    return strA.length - strB.length;
+  });
 };
 
 /*-----------------------------------------------------------------------------------------------
 CHALLENGE 7
 
-Write a function named sortPeople that takes in an array of Person objects, each of which has firstName, lastName, and age properties, and sorts those people by their last names. Do not worry about capitalization or first names.
+Write a function named sortPeople that takes in an array of Person objects, each of which has firstName, lastName, and age properties, 
+and sorts those people by their last names. Do not worry about capitalization or first names.
 ------------------------------------------------------------------------------------------------ */
 
 function Person(firstName, lastName, age) {
@@ -94,13 +112,19 @@ const people = [
 ];
 
 const sortPeople = arr => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    if (a.lastName > b.lastName) {
+      return 1;
+    }
+    return -1;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
 
-Write a function named sortPeopleBetter that takes in an array of Person objects, each of which has firstName, lastName, and age properties, and sorts those people by their last names.
+Write a function named sortPeopleBetter that takes in an array of Person objects, each of which has firstName, lastName, and age properties, 
+and sorts those people by their last names.
 
 If two people share the same last name, alphabetize on their first name.
 
@@ -108,15 +132,28 @@ If two people have the same full name, the younger one should come first. Do not
 ------------------------------------------------------------------------------------------------ */
 
 const sortPeopleBetter = arr => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    if (a.lastName > b.lastName) {
+      return 1;
+    } else if (a.lastName < b.lastName) {
+      return -1;
+    } else {
+      if (a.firstName > b.firstName) {
+        return 1;
+      }
+      return -1;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
 
-Write a function named sortMeetingsByDay that takes in an array of objects, each of which represents a meeting happening a particular day of the week, with a particular start time and end time.
+Write a function named sortMeetingsByDay that takes in an array of objects, each of which represents a meeting happening a 
+particular day of the week, with a particular start time and end time.
 
-Sort the meetings by the day on which they happen, Monday-Friday. It does not matter which order meetings come in on a particular day. For example, if there are two meetings on Monday, it does not matter which comes first.
+Sort the meetings by the day on which they happen, Monday-Friday. It does not matter which order meetings come in on a particular day.
+For example, if there are two meetings on Monday, it does not matter which comes first.
 ------------------------------------------------------------------------------------------------ */
 
 function Meeting(dayOfWeek, start, end) {
@@ -134,7 +171,20 @@ const meetings = [
 ];
 
 const sortMeetingsByDay = arr => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    const dayVals = {
+      Monday: 1,
+      Tuesday: 2,
+      Wednesday: 3,
+      Thursday: 4,
+      Friday: 5
+    };
+    if (dayVals[a.dayOfWeek] > dayVals[b.dayOfWeek]) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -148,7 +198,31 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = arr => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    const dayVals = {
+      Monday: 1,
+      Tuesday: 2,
+      Wednesday: 3,
+      Thursday: 4,
+      Friday: 5
+    };
+    if (dayVals[a.dayOfWeek] > dayVals[b.dayOfWeek]) {
+      return 1;
+    } else if (dayVals[a.dayOfWeek] < dayVals[b.dayOfWeek]) {
+      return -1;
+    } else {
+      if (a.start > b.start) {
+        return 1;
+      } else if (a.start < b.start) {
+        return -1;
+      } else {
+        if (a.end > b.end) {
+          return 1;
+        }
+        return -1;
+      }
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
