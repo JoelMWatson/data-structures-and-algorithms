@@ -9,7 +9,8 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = arr => {
-  // Solution code here...
+  const count = arr.reduce((count, current) => count + 1);
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,7 +73,10 @@ let starWarsData = [
 ];
 
 const returnNames = arr => {
-  // Solution code here...
+  let newArr = arr.reduce(function(acc, current) {
+    return [...acc, current.name];
+  }, []);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -84,7 +88,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = str => {
-  // Solution code here...
+  const strArr = [...str];
+  const revArr = strArr.reduce((acc, current) => {
+    return [current, ...acc];
+  });
+  return revArr.join("");
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,7 +145,13 @@ const characters = [
 ];
 
 const countNumberOfChildren = arr => {
-  // Solution code here...
+  const childCount = arr.reduce((acc, current) => {
+    if (current.children) {
+      return acc + current.children.length;
+    }
+    return acc + 0;
+  }, 0);
+  return childCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -149,7 +163,19 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = arr => {
-  // Solution code here...
+  const avg = arr.reduce(
+    (acc, current) => {
+      if (!acc.count) {
+        acc.count = 1;
+      } else {
+        acc.count++;
+      }
+      acc.sum += current;
+      return acc;
+    },
+    { count: 0, sum: 0 }
+  );
+  return avg.sum / avg.count;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -170,13 +196,19 @@ const isPrime = value => {
 };
 
 const countPrimeNumbers = arr => {
-  // Solution code here...
+  const primeCount = arr.reduce((total, current) => {
+    if (isPrime(current)) {
+      total++;
+    }
+    return total;
+  }, 0);
+  return primeCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
-Write a function named extractState that, given the snorlaxData, below, uses reduce to return the object whose 'name' property matches the given string.
+Write a function named extractStat that, given the snorlaxData, below, uses reduce to return the object whose 'name' property matches the given string.
 
 If the input array does not have a stat with that specific name, the function should return null.
 ------------------------------------------------------------------------------------------------ */
@@ -213,7 +245,13 @@ const snorlaxData = {
 };
 
 const extractStat = (statName, arr) => {
-  // Solution code here...
+  const stat = arr.reduce((acc, current) => {
+    if (current.stat.name === statName) {
+      return current;
+    }
+    return acc;
+  }, null);
+  return stat;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -227,7 +265,16 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 const extractChildren = arr => {
-  // Solution code here...
+  const tempArr = arr.filter(current => {
+    return current.name.includes("a");
+  });
+  const newArr = tempArr.reduce((acc, current) => {
+    if (current.children) {
+      return [...acc, ...current.children];
+    }
+    return [...acc];
+  }, []);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
