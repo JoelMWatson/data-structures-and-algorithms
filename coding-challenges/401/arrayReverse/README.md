@@ -1,10 +1,8 @@
 # Reverse an Array
 
-Write a function called reverseArray which takes an array as an argument. return an array with elements in reversed order.
-
 ## Challenge
 
-Do the above without utilizing any of the built-in methods available to your language,
+Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
 
 ## Approach & Efficiency
 
@@ -15,6 +13,4 @@ Space Complexity: O(n)
 
 ## Solution
 
-<!-- Embedded whiteboard image -->
-
-![UML](https://github.com/JoelMWatson/data-structures-and-algorithms/assets/array-reverse.jpg)
+![UML](https://github.com/JoelMWatson/data-structures-and-algorithms/blob/array-reverse/assets/array-reverse.jpg)
