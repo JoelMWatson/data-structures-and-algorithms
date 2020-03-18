@@ -13,4 +13,4 @@ Space Complexity: O(n)
 
 ## Solution
 
-![UML](https://github.com/JoelMWatson/data-structures-and-algorithms/blob/array-reverse/assets/array-reverse.jpg)
+![UML](https://raw.githubusercontent.com/JoelMWatson/data-structures-and-algorithms/master/assets/array-reverse.jpg)
