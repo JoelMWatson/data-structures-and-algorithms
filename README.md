@@ -22,3 +22,5 @@
 - [Level 400 Challenges](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401)
 
 1. [Array Reverse](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/arrayReverse)
+2. [Array Shift](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/arrayShift)
+
