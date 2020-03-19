@@ -17,7 +17,7 @@
 11. [Regex 2](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/301/regular-expressions-2)
 12. [Slice Splice Split & Join](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/301/slice-splice-split-join)
 13. [Sorting](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/301/sorting)
-14. [two-dimensional-arrays](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/301/two-dimentional-arrays)
+14. [Two Dimensional Arays](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/301/two-dimensional-arrays)
 
 - [Level 400 Challenges](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401)
 
