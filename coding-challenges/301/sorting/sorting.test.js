@@ -137,10 +137,13 @@ const sortPeopleBetter = arr => {
       return 1;
     } else if (a.lastName < b.lastName) {
       return -1;
+    } else if (a.firstName > b.firstName) {
+      return 1;
+    } else if (a.firstName < b.firstName) {
+      return -1
+    } else if (a.age > b.age) {
+      return 1;
     } else {
-      if (a.firstName > b.firstName) {
-        return 1;
-      }
       return -1;
     }
   });
