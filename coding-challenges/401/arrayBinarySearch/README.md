@@ -13,4 +13,4 @@ Space Complexity: O(1)
 
 ## Solution
 
-![UML](https://raw.githubusercontent.com/JoelMWatson/data-structures-and-algorithms/master/assets/array-binary-search.jpg)
+![UML](https://raw.githubusercontent.com/JoelMWatson/data-structures-and-algorithms/master/assets/binary-search-tree.jpg)
