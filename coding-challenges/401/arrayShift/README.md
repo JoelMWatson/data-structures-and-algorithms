@@ -13,4 +13,4 @@ Time Complexity: O(n)
 Space Complexity: O(n)
 
 ## Solution
-![UML](https://raw.githubusercontent.com/JoelMWatson/data-structures-and-algorithms/master/assets/array-shift.jpg)
+![UML](https://raw.githubusercontent.com/JoelMWatson/data-structures-and-algorithms/master/assets/array-shift-1.jpg)
