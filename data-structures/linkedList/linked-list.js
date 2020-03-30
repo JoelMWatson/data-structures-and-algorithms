@@ -69,19 +69,20 @@ class DoublyLinkedList extends LinkedList {
         super();
         this.tail = null;
     }
+
+    insert(val) {
+        if (!this.head) {
+            this.head = this.tail = new Node(val);
+        } else if (this.head === this.tail) {
+            this.head = new Node(val);
+            this.head.next = this.tail
+        } else {
+            let newHead = new Node(val, this.head);
+            this.head.prev = newHead;
+            this.head = newHead;
+        }
+    }
+
 }
-
-
-
-
-let list = new LinkedList();
-list.insert(10);
-list.insert(8);
-list.insert(6);
-console.log(list.toString());
-
-
-
-
 
 module.exports = { Node, LinkedList, DoublyLinkedList }

@@ -33,5 +33,6 @@ toString(): O(n)
 insert() - A function that takes any value as an argument and adds a new Node with that value to the beginning of the list (before the current head
 includes() - A function that takes in a value as an argument and returns true or false if that value was found in the list
 toString() - A function that takes no arguments but prints out a visual representation of the Linked List, similar to the format: { a } -> { b } -> { c } -> NULL
+
 ## Testing
 npm test
