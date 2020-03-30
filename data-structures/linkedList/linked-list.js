@@ -13,22 +13,24 @@ class LinkedList {
         this.head = null;
     }
 
-    insert() {
-
+    insert(val) {
+        
     }
 
-    includes() {
-
+    includes(val) {
+        
     }
 
     toString() {
-        
+
     }
 }
 
-class DoublyLinkedList extends LinkedList() {
+class DoublyLinkedList extends LinkedList {
     constructor() {
         super();
         this.tail = null;
     }
 }
+
+module.exports = { Node, LinkedList, DoublyLinkedList }
