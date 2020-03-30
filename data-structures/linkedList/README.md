@@ -1,8 +1,8 @@
 # Linked List Implementation
     
 ## Links
-[Pull Request](#)
-[CI/CD](#)
+- [Pull Request](https://github.com/JoelMWatson/data-structures-and-algorithms/pull/5)
+- [CI/CD](https://github.com/JoelMWatson/data-structures-and-algorithms/runs/544406714)
 
     
 ## Challenge
