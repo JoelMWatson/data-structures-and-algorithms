@@ -94,7 +94,7 @@ describe('Tests for coding challenge 06', () => {
             list.head.next.next.next.next.val,
             list.head.next.next.next.next.next.val
         ]
-        expect(results).toBe([7, 6, 5]);
+        expect(results).toEqual([7, 6, 5]);
    });
 
    test('Can successfully insert a node before a node located in the middle of a linked list',() => {
@@ -118,15 +118,25 @@ describe('Tests for coding challenge 06', () => {
         list.insert(10);        
         list.insert(9);        
         list.insert(8);
-        list.insertAfter(9, 15);
-        expect(list.head.next.next.val).toBe(15);
+        list.insertAfter(8, 15);
+        expect(list.head.next.val).toBe(15);
    });
+
+   test('Can successfully insert after a node at the head of the linked list',() => {
+        let list = new LinkedList();
+        list.insert(10);        
+        list.insertAfter(10, 15);
+        console.log(list.toString())
+        expect(list.head.next.val).toBe(15);
+    });
 
    test('Can successfully insert a node after the last node of the linked list',() => {
         let list = new LinkedList();
         list.insert(10);
+        list.insert(9);        
         list.insertAfter(10, 15);
-        expect(list.head.next.val).toBe(15);  
+        console.log(list.toString())
+        expect(list.head.next.next.val).toBe(15);  
    });
 
 });

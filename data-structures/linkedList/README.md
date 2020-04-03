@@ -1,9 +1,10 @@
 # Linked List Implementation
     
 ## Links
-- [Pull Request](https://github.com/JoelMWatson/data-structures-and-algorithms/pull/5)
-- [CI/CD](https://github.com/JoelMWatson/data-structures-and-algorithms/runs/544406714)
-
+- [Pull Request Lab 05](https://github.com/JoelMWatson/data-structures-and-algorithms/pull/5)
+- [CI/CD Lab 05](https://github.com/JoelMWatson/data-structures-and-algorithms/runs/544406714)
+- [Pull Request CC 06](#)
+- [CI/CD CC 06](#)
     
 ## Challenge
 Create two classes, Node and LinkedList.
@@ -32,14 +33,20 @@ Stretch Goal
 An optional stretch goal for this lab assignment is to implement a class called DoublyLinkedList. This class should allow users to do all the same functionality of a LinkedList class, except this time each Node will have their next and prev pointers set. How would the insert(), includes() and toString() functions need to be altered to support this?
 
 ## Approach & Efficiency
-Insert(): O(1)
-Includes(): O(n)
+insert(): O(1)
+includes(): O(n)
 toString(): O(n)
+append(): O(n)
+insertBefore(): O(n)
+insertAfter(): O(n)
 
 ## API
-- insert() - A function that takes any value as an argument and adds a new Node with that value to the beginning of the list (before the current head
-- includes() - A function that takes in a value as an argument and returns true or false if that value was found in the list
+- insert(value) - A function that takes any value as an argument and adds a new Node with that value to the beginning of the list (before the current head
+- includes(value) - A function that takes in a value as an argument and returns true or false if that value was found in the list
 - toString() - A function that takes no arguments but prints out a visual representation of the Linked List, similar to the format: { a } -> { b } -> { c } -> NULL
+- append(value) which adds a new node with the given value to the end of the list
+- insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+- insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
 ## Testing
 npm test

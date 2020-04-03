@@ -64,15 +64,56 @@ class LinkedList {
     }
 
     append(value) {
-        //which adds a new node with the given value to the end of the list
+        let current = this.head;
+        if (!current) {
+            this.head = new Node(value);
+            return;
+        }
+        while (current.next) {
+            current = current.next;
+        }
+        current.next = new Node(value);
     }
 
     insertBefore(value, newVal) {
-        //which add a new node with the given newValue immediately before the first value node
+        let current = this.head;
+        if (!current) {
+            throw new Error(value + ' not found');
+        } else if (current.val === value) {
+            this.head = new Node(newVal, this.head);
+            return;
+        }
+        while(current.next) {
+            if (current.next.val === value) {
+                let node = new Node(newVal, current.next);
+                current.next = node;
+                return
+            }
+            current = current.next;
+        }
+        throw new Error(value + ' not found');
     }
 
     insertAfter(value, newVal) {
-        //which add a new node with the given newValue immediately after the first value node
+        let current = this.head;
+        let node;
+        if (!current) {
+            throw new Error(value + ' not found');
+        }
+        while(current) {
+            if (current.val === value) {
+                if (current.next) {
+                    node = new Node(newVal, current.next);
+                    current.next = node;
+                } else {
+                    node = new Node(newVal);
+                    current.next = node;
+                }
+                return;
+            }
+            current = current.next;
+        }
+        throw new Error(value + ' not found');
     }
 }
 
