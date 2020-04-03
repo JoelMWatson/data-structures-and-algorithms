@@ -24,5 +24,7 @@
 1. [Array Reverse](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/arrayReverse)
 2. [Array Shift](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/arrayShift)
 3. [Array Binary Search](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/arrayBinarySearch)
-4. [Linked List](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structuress/linkedList)
 
+- [Data Structures]
+
+1. [Linked List](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structuress/linkedList)
