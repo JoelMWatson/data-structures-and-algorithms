@@ -6,7 +6,7 @@
 - [Pull Request CC 06](https://github.com/JoelMWatson/data-structures-and-algorithms/pull/6)
 - [CI/CD CC 06](https://github.com/JoelMWatson/data-structures-and-algorithms/runs/557137692)
 - [Pull Request CC 07](https://github.com/JoelMWatson/data-structures-and-algorithms/pull/7)
-- [CI/CD CC 07](#)
+- [CI/CD CC 07](https://github.com/JoelMWatson/data-structures-and-algorithms/runs/560428137)
     
 ## Challenge
 Create two classes, Node and LinkedList.
