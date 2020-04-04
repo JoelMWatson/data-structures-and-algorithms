@@ -3,8 +3,8 @@
 ## Links
 - [Pull Request Lab 05](https://github.com/JoelMWatson/data-structures-and-algorithms/pull/5)
 - [CI/CD Lab 05](https://github.com/JoelMWatson/data-structures-and-algorithms/runs/544406714)
-- [Pull Request CC 06](#)
-- [CI/CD CC 06](#)
+- [Pull Request CC 06](https://github.com/JoelMWatson/data-structures-and-algorithms/pull/6)
+- [CI/CD CC 06](https://github.com/JoelMWatson/data-structures-and-algorithms/runs/557137692)
     
 ## Challenge
 Create two classes, Node and LinkedList.
@@ -33,12 +33,12 @@ Stretch Goal
 An optional stretch goal for this lab assignment is to implement a class called DoublyLinkedList. This class should allow users to do all the same functionality of a LinkedList class, except this time each Node will have their next and prev pointers set. How would the insert(), includes() and toString() functions need to be altered to support this?
 
 ## Approach & Efficiency
-insert(): O(1)
-includes(): O(n)
-toString(): O(n)
-append(): O(n)
-insertBefore(): O(n)
-insertAfter(): O(n)
+- insert(): O(1)
+- includes(): O(n)
+- toString(): O(n)
+- append(): O(n)
+- insertBefore(): O(n)
+- insertAfter(): O(n)
 
 ## API
 - insert(value) - A function that takes any value as an argument and adds a new Node with that value to the beginning of the list (before the current head
@@ -50,3 +50,6 @@ insertAfter(): O(n)
 
 ## Testing
 npm test
+
+## Whiteboarding
+![whiteboard](https://drive.google.com/uc?export=view&id=10xR2TTDhWaxE3h2dezCZtNDnYkHwoyQQ)
