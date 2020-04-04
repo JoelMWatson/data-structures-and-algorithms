@@ -4,7 +4,7 @@
 
 - [Data Structures](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures)
 
-1. [Linked List](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structuress/linkedList)
+1. [Linked List](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures/linkedList)
 
 - [Level 300 Challenges](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/301)
 
