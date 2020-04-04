@@ -112,6 +112,19 @@ class LinkedList {
         }
         throw new Error(value + ' not found');
     }
+
+    kthFromEnd(k) {
+        let position = this.count() - k;
+        if (position <= 0 || !this.head || k < 0) {
+            throw new Error('Invaid input for kth value')
+        }
+        let current = this.head;
+        let curPos = 1;
+        for (curPos; curPos < position; curPos++) {
+            current = current.next;
+        }
+        return current.val
+    }
 }
 
 class DoublyLinkedList extends LinkedList {

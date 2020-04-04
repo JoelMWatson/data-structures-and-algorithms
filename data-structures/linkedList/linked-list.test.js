@@ -141,6 +141,46 @@ describe('Tests for coding challenge 06', () => {
 
 });
 
+describe('Tests for coding challenge 07', () => {  
+    test('Where k is greater than the length of the linked list', () => {
+        let list = new LinkedList();
+        list.insert(10);        
+        list.insert(9);        
+        list.insert(8);
+        expect(() => list.kthFromEnd(10)).toThrow(new Error('Invaid input for kth value'));
+    });
+
+    test('Where k and the length of the list are the same', () => {
+        let list = new LinkedList();
+        list.insert(10);        
+        list.insert(9);        
+        list.insert(8);
+        expect(() => list.kthFromEnd(3)).toThrow(new Error('Invaid input for kth value'));
+    });
+
+    test('Where k is not a positive integer', () => {
+        let list = new LinkedList();
+        list.insert(10);        
+        list.insert(9);        
+        list.insert(8);
+        expect(() =>list.kthFromEnd(-3)).toThrow(new Error('Invaid input for kth value'));
+    });
+
+    test('Where the linked list is of a size 1', () => {
+        let list = new LinkedList();
+        list.insert(10);        
+        expect(list.kthFromEnd(0)).toBe(10);
+    });
+
+    test('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+        let list = new LinkedList();
+        list.insert(10);        
+        list.insert(9);        
+        list.insert(8);
+        expect(list.kthFromEnd(1)).toBe(9);
+    });
+});
+
 describe('Testing the DoublyLinkedList functionality', () => {
 
     test('DoublyLinkedList can successfully instantiate an empty list', () => {
@@ -208,5 +248,5 @@ describe('Testing the DoublyLinkedList functionality', () => {
         expect(str).toEqual('{ 8 } -> { 9 } -> { 10 } -> NULL');
     })
 
-})
+});
 
