@@ -2,7 +2,7 @@
 
 ## Table Of Contents
 
-- [Data Structures]
+- [Data Structures](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures)
 
 1. [Linked List](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structuress/linkedList)
 
