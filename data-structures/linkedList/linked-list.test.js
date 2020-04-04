@@ -68,8 +68,78 @@ describe('Testing the LinkedList functionality', () => {
         let str = list.toString();   
         expect(str).toEqual('{ 8 } -> { 9 } -> { 10 } -> NULL');
     })
-
 })
+
+describe('Tests for coding challenge 06', () => {  
+
+   test('Can successfully add a node to the end of the linked list',() => {
+        let list = new LinkedList();
+        list.insert(10);        
+        list.insert(9);        
+        list.insert(8);
+        list.append(7);      
+        expect(list.head.next.next.next.val).toBe(7);
+   });
+
+   test('Can successfully add multiple nodes to the end of a linked list',() => {
+        let list = new LinkedList();
+        list.insert(10);        
+        list.insert(9);        
+        list.insert(8);
+        list.append(7);
+        list.append(6);
+        list.append(5);
+        let results = [
+            list.head.next.next.next.val,
+            list.head.next.next.next.next.val,
+            list.head.next.next.next.next.next.val
+        ]
+        expect(results).toEqual([7, 6, 5]);
+   });
+
+   test('Can successfully insert a node before a node located in the middle of a linked list',() => {
+        let list = new LinkedList();
+        list.insert(10);        
+        list.insert(9);        
+        list.insert(8);
+        list.insertBefore(9, 15);
+        expect(list.head.next.val).toBe(15);
+   });
+
+   test('Can successfully insert a node before the first node of a linked list',() => {
+        let list = new LinkedList();
+        list.insert(10);
+        list.insertBefore(10, 15);
+        expect(list.head.val).toBe(15);    
+   });
+
+   test('Can successfully insert after a node in the middle of the linked list',() => {
+        let list = new LinkedList();
+        list.insert(10);        
+        list.insert(9);        
+        list.insert(8);
+        list.insertAfter(8, 15);
+        expect(list.head.next.val).toBe(15);
+   });
+
+   test('Can successfully insert after a node at the head of the linked list',() => {
+        let list = new LinkedList();
+        list.insert(10);        
+        list.insertAfter(10, 15);
+        console.log(list.toString())
+        expect(list.head.next.val).toBe(15);
+    });
+
+   test('Can successfully insert a node after the last node of the linked list',() => {
+        let list = new LinkedList();
+        list.insert(10);
+        list.insert(9);        
+        list.insertAfter(10, 15);
+        console.log(list.toString())
+        expect(list.head.next.next.val).toBe(15);  
+   });
+
+});
 
 describe('Testing the DoublyLinkedList functionality', () => {
 

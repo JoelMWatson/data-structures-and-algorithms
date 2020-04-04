@@ -19,7 +19,7 @@ class LinkedList {
         }
         let current = this.head;
         let count = 1;
-        while(current.next) {
+        while (current.next) {
             count++;
             current = current.next;
         }
@@ -62,6 +62,56 @@ class LinkedList {
         str += ' -> NULL'
         return str;
     }
+
+    append(value) {
+        let current = this.head;
+        if (current) {
+            while (current.next) {
+                current = current.next;
+            }
+            current.next = new Node(value);
+        } else {
+            this.head = new Node(value);
+        }
+    }
+
+    insertBefore(value, newVal) {
+        let current = this.head;
+        if (current) {
+            if (current.val === value) {
+                this.head = new Node(newVal, this.head);
+                return
+            }       
+            while (current.next) {
+                if (current.next.val === value) {
+                    let node = new Node(newVal, current.next);
+                    current.next = node;
+                    return
+                }
+                current = current.next;
+            }
+        }
+        throw new Error(value + ' not found');
+    }
+
+    insertAfter(value, newVal) {
+        let current = this.head;
+        let node;
+        while (current) {
+            if (current.val === value) {
+                if (current.next) {
+                    node = new Node(newVal, current.next);
+                    current.next = node;
+                } else {
+                    node = new Node(newVal);
+                    current.next = node;
+                }
+                return;
+            }
+            current = current.next;
+        }
+        throw new Error(value + ' not found');
+    }
 }
 
 class DoublyLinkedList extends LinkedList {
@@ -82,6 +132,8 @@ class DoublyLinkedList extends LinkedList {
             this.head = newHead;
         }
     }
+
+    // TODO append insertBefore insertAfter
 
 }
 
