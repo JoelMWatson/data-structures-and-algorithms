@@ -5,6 +5,7 @@
 - [Data Structures](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures)
 
 1. [Linked List](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures/linkedList)
+2. [Stack & Queue](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures/stacksAndQueues)
 
 - [Level 300 Challenges](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/301)
 
