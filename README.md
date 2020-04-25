@@ -30,3 +30,4 @@
 2. [Array Shift](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/arrayShift)
 3. [Array Binary Search](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/arrayBinarySearch)
 4. [Linkedlist Merge](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/llMerge)
+5. [FIFO AnimalShelter](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/fifoAnimalShelter)
