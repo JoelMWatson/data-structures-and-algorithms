@@ -62,12 +62,3 @@ class AnimalShelter {
 }
 
 module.exports = { AnimalShelter, Animal };
-
-const shelter = new AnimalShelter();
-shelter.enqueue(new Animal('Dog', 'Barky'));
-shelter.enqueue(new Animal('Dog', 'Woofy'));
-shelter.enqueue(new Animal('Dog', 'Whimpery'));
-shelter.enqueue(new Animal('Dog', 'Snarly'));
-shelter.enqueue(new Animal('Cat', 'Scratchy'));
-const cat = shelter.dequeue('Cat');
-console.log(cat);
