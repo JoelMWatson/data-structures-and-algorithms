@@ -1,49 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1587599916142" clover="3.2.0">
-  <project timestamp="1587599916143" name="All files">
-    <metrics statements="40" coveredstatements="38" conditionals="18" coveredconditionals="16" methods="5" coveredmethods="5" elements="63" coveredelements="59" complexity="0" loc="40" ncloc="40" packages="1" files="1" classes="1"/>
-    <file name="fifo-animal-shelter.js" path="C:\Users\Joel\Projects\CodeFellows\data-structures-and-algorithms\coding-challenges\401\fifoAnimalShelter\fifo-animal-shelter.js">
-      <metrics statements="40" coveredstatements="38" conditionals="18" coveredconditionals="16" methods="5" coveredmethods="5"/>
-      <line num="5" count="21" type="stmt"/>
-      <line num="6" count="21" type="cond" truecount="2" falsecount="0"/>
-      <line num="12" count="22" type="stmt"/>
-      <line num="13" count="22" type="stmt"/>
-      <line num="19" count="6" type="stmt"/>
-      <line num="20" count="6" type="stmt"/>
-      <line num="24" count="22" type="cond" truecount="4" falsecount="0"/>
-      <line num="25" count="21" type="stmt"/>
-      <line num="26" count="21" type="cond" truecount="2" falsecount="0"/>
-      <line num="27" count="5" type="stmt"/>
-      <line num="28" count="5" type="stmt"/>
-      <line num="30" count="16" type="stmt"/>
-      <line num="31" count="16" type="stmt"/>
-      <line num="34" count="1" type="stmt"/>
-      <line num="39" count="4" type="stmt"/>
-      <line num="40" count="4" type="cond" truecount="4" falsecount="0"/>
-      <line num="41" count="3" type="cond" truecount="1" falsecount="1"/>
-      <line num="42" count="0" type="stmt"/>
-      <line num="43" count="0" type="stmt"/>
-      <line num="45" count="3" type="stmt"/>
-      <line num="46" count="3" type="stmt"/>
-      <line num="47" count="11" type="cond" truecount="2" falsecount="0"/>
-      <line num="48" count="2" type="stmt"/>
-      <line num="49" count="2" type="stmt"/>
-      <line num="50" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="51" count="2" type="stmt"/>
-      <line num="53" count="9" type="stmt"/>
-      <line num="55" count="1" type="stmt"/>
-      <line num="56" count="1" type="stmt"/>
-      <line num="59" count="1" type="stmt"/>
-      <line num="60" count="1" type="stmt"/>
-      <line num="64" count="1" type="stmt"/>
-      <line num="66" count="1" type="stmt"/>
-      <line num="67" count="1" type="stmt"/>
-      <line num="68" count="1" type="stmt"/>
-      <line num="69" count="1" type="stmt"/>
-      <line num="70" count="1" type="stmt"/>
-      <line num="71" count="1" type="stmt"/>
-      <line num="72" count="1" type="stmt"/>
-      <line num="73" count="1" type="stmt"/>
+<coverage generated="1588132876607" clover="3.2.0">
+  <project timestamp="1588132876607" name="All files">
+    <metrics statements="43" coveredstatements="43" conditionals="17" coveredconditionals="14" methods="7" coveredmethods="7" elements="67" coveredelements="64" complexity="0" loc="43" ncloc="43" packages="1" files="1" classes="1"/>
+    <file name="multi-bracket-validation.js" path="C:\Users\Joel\Projects\CodeFellows\data-structures-and-algorithms\coding-challenges\401\multiBracketValidation\multi-bracket-validation.js">
+      <metrics statements="43" coveredstatements="43" conditionals="17" coveredconditionals="14" methods="7" coveredmethods="7"/>
+      <line num="5" count="23" type="stmt"/>
+      <line num="6" count="23" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="4" type="stmt"/>
+      <line num="16" count="3" type="stmt"/>
+      <line num="21" count="23" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="4" type="stmt"/>
+      <line num="23" count="4" type="stmt"/>
+      <line num="25" count="19" type="stmt"/>
+      <line num="26" count="19" type="stmt"/>
+      <line num="31" count="23" type="stmt"/>
+      <line num="32" count="23" type="stmt"/>
+      <line num="34" count="22" type="stmt"/>
+      <line num="38" count="103" type="stmt"/>
+      <line num="39" count="103" type="stmt"/>
+      <line num="40" count="103" type="stmt"/>
+      <line num="41" count="249" type="stmt"/>
+      <line num="42" count="249" type="stmt"/>
+      <line num="44" count="103" type="stmt"/>
+      <line num="48" count="1" type="stmt"/>
+      <line num="49" count="4" type="stmt"/>
+      <line num="51" count="4" type="stmt"/>
+      <line num="52" count="103" type="stmt"/>
+      <line num="53" count="103" type="cond" truecount="7" falsecount="0"/>
+      <line num="55" count="7" type="stmt"/>
+      <line num="56" count="7" type="stmt"/>
+      <line num="57" count="7" type="stmt"/>
+      <line num="59" count="8" type="stmt"/>
+      <line num="60" count="8" type="stmt"/>
+      <line num="61" count="8" type="stmt"/>
+      <line num="63" count="8" type="stmt"/>
+      <line num="64" count="8" type="stmt"/>
+      <line num="65" count="8" type="stmt"/>
+      <line num="67" count="7" type="stmt"/>
+      <line num="68" count="6" type="cond" truecount="1" falsecount="1"/>
+      <line num="69" count="6" type="stmt"/>
+      <line num="71" count="8" type="stmt"/>
+      <line num="72" count="8" type="cond" truecount="1" falsecount="1"/>
+      <line num="73" count="8" type="stmt"/>
+      <line num="75" count="8" type="stmt"/>
+      <line num="76" count="8" type="cond" truecount="1" falsecount="1"/>
+      <line num="77" count="8" type="stmt"/>
+      <line num="82" count="3" type="stmt"/>
+      <line num="85" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
