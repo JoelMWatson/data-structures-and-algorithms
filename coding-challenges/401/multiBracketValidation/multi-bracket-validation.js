@@ -31,8 +31,9 @@ class Stack {
     let node = this.top;
     if (this.top) {
       this.top = this.top.next;
+      return node.val;
     }
-    return node.val;
+    return node;
   }
 
   toString() {
@@ -50,7 +51,6 @@ const multiBracketValidation = (input) => {
   let brackets = new Stack();
   let currentBracket;
   for (let char of input) {
-    console.log('backets: ', brackets.toString());
     switch (char) {
       case '{':
         brackets.push('}');
