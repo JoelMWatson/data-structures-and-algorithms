@@ -29,8 +29,9 @@ class Stack {
 
   pop() {
     let node = this.top;
-    this.top = this.top.next;
-
+    if (this.top) {
+      this.top = this.top.next;
+    }
     return node.val;
   }
 
