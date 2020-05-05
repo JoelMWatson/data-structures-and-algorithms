@@ -94,6 +94,11 @@ describe('Testing Binary Search Tree', () => {
   test('You can search a binary search tree for an existing value and get true', () => {
     const bst = new BinarySearchTree();
     bst.add(5);
+    bst.add(1);
+    bst.add(10);
+    bst.add(3);
+    bst.add(7);
+    bst.add(8);
     expect(bst.contains(5)).toBeTruthy();
   });
 
@@ -105,6 +110,6 @@ describe('Testing Binary Search Tree', () => {
     bst.add(3);
     bst.add(7);
     bst.add(8);
-    expect(bst.contains(7)).toBeFalsy();
+    expect(bst.contains(6)).toBeFalsy();
   });
 });
