@@ -2,8 +2,8 @@
 
 ## Links
 
-- [Pull Request](https://github.com/JoelMWatson/data-structures-and-algorithms/pull/#)
-- [CI/CD](https://github.com/JoelMWatson/data-structures-and-algorithms/pull/#/checks)
+- [Pull Request](https://github.com/JoelMWatson/data-structures-and-algorithms/pull/12)
+- [CI/CD](https://github.com/JoelMWatson/data-structures-and-algorithms/pull/12/checks)
 
 ## Challenge
 

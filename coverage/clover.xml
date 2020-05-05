@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1588634355725" clover="3.2.0">
-  <project timestamp="1588634355725" name="All files">
-    <metrics statements="95" coveredstatements="83" conditionals="70" coveredconditionals="52" methods="15" coveredmethods="14" elements="180" coveredelements="149" complexity="0" loc="95" ncloc="95" packages="1" files="1" classes="1"/>
+<coverage generated="1588708678777" clover="3.2.0">
+  <project timestamp="1588708678777" name="All files">
+    <metrics statements="95" coveredstatements="94" conditionals="70" coveredconditionals="62" methods="15" coveredmethods="15" elements="180" coveredelements="171" complexity="0" loc="95" ncloc="95" packages="1" files="1" classes="1"/>
     <file name="tree.js" path="C:\Users\Joel\Projects\CodeFellows\data-structures-and-algorithms\data-structures\tree\tree.js">
-      <metrics statements="95" coveredstatements="83" conditionals="70" coveredconditionals="52" methods="15" coveredmethods="14"/>
-      <line num="5" count="49" type="stmt"/>
-      <line num="6" count="49" type="cond" truecount="2" falsecount="0"/>
-      <line num="7" count="49" type="cond" truecount="2" falsecount="0"/>
+      <metrics statements="95" coveredstatements="94" conditionals="70" coveredconditionals="62" methods="15" coveredmethods="15"/>
+      <line num="5" count="59" type="stmt"/>
+      <line num="6" count="59" type="cond" truecount="2" falsecount="0"/>
+      <line num="7" count="59" type="cond" truecount="2" falsecount="0"/>
       <line num="11" count="1" type="cond" truecount="2" falsecount="0"/>
       <line num="12" count="100" type="cond" truecount="2" falsecount="0"/>
       <line num="13" count="46" type="stmt"/>
@@ -77,27 +77,27 @@
       <line num="123" count="3" type="stmt"/>
       <line num="127" count="1" type="stmt"/>
       <line num="133" count="4" type="stmt"/>
-      <line num="137" count="3" type="cond" truecount="1" falsecount="1"/>
+      <line num="137" count="13" type="cond" truecount="2" falsecount="0"/>
       <line num="138" count="3" type="stmt"/>
-      <line num="140" count="0" type="stmt"/>
-      <line num="145" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="146" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="147" count="0" type="stmt"/>
-      <line num="149" count="0" type="stmt"/>
-      <line num="152" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="153" count="0" type="stmt"/>
-      <line num="155" count="0" type="stmt"/>
+      <line num="140" count="10" type="stmt"/>
+      <line num="145" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="146" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="147" count="4" type="stmt"/>
+      <line num="149" count="4" type="stmt"/>
+      <line num="152" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="153" count="4" type="stmt"/>
+      <line num="155" count="6" type="stmt"/>
       <line num="161" count="2" type="cond" truecount="1" falsecount="1"/>
       <line num="162" count="2" type="stmt"/>
-      <line num="166" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="166" count="4" type="cond" truecount="2" falsecount="0"/>
       <line num="167" count="1" type="stmt"/>
-      <line num="168" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="169" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="170" count="0" type="stmt"/>
-      <line num="172" count="0" type="stmt"/>
+      <line num="168" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="169" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="170" count="1" type="stmt"/>
+      <line num="172" count="1" type="stmt"/>
       <line num="175" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="176" count="0" type="stmt"/>
-      <line num="178" count="1" type="stmt"/>
+      <line num="176" count="1" type="stmt"/>
+      <line num="178" count="0" type="stmt"/>
       <line num="184" count="1" type="stmt"/>
     </file>
   </project>
