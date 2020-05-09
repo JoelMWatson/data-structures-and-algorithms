@@ -8,13 +8,13 @@ class Node {
   }
 }
 
-const build = (arr, root = null, i = 0) => {
+const buildLevels = (arr, root = null, i = 0) => {
   if (i < arr.length) {
     root = new Node(arr[i]);
     // insert left child
-    root.left = build(arr, root.left, 2 * i + 1);
+    root.left = buildLevels(arr, root.left, 2 * i + 1);
     // insert right child
-    root.right = build(arr, root.right, 2 * i + 2);
+    root.right = buildLevels(arr, root.right, 2 * i + 2);
   }
   return root;
 };
@@ -28,14 +28,15 @@ class BinaryTree {
     return this.root === null;
   }
 
-  preOrder(node = this.root, order = []) {
-    if (!node) return [];
+  preOrder(node = this.root) {
+    if (!node) return null;
+    let order = [];
     order.push(node.val);
     if (node.left) {
-      order.concat(this.preOrder(node.left, order));
+      order = order.concat(this.preOrder(node.left));
     }
     if (node.right) {
-      order.concat(this.preOrder(node.right, order));
+      order = order.concat(this.preOrder(node.right));
     }
     return order;
   }
@@ -56,14 +57,15 @@ class BinaryTree {
     return order;
   }
 
-  inOrder(node = this.root, order = []) {
-    if (!node) return [];
+  inOrder(node = this.root) {
+    if (!node) return null;
+    let order = [];
     if (node.left) {
-      order.concat(this.inOrder(node.left, order));
+      order = order.concat(this.inOrder(node.left));
     }
     order.push(node.val);
     if (node.right) {
-      order.concat(this.inOrder(node.right, order));
+      order = order.concat(this.inOrder(node.right));
     }
     return order;
   }
@@ -87,13 +89,14 @@ class BinaryTree {
     return order;
   }
 
-  postOrder(node = this.root, order = []) {
-    if (!node) return [];
+  postOrder(node = this.root) {
+    if (!node) return null;
+    let order = [];
     if (node.left) {
-      order.concat(this.postOrder(node.left, order));
+      order = order.concat(this.postOrder(node.left));
     }
     if (node.right) {
-      order.concat(this.postOrder(node.right, order));
+      order = order.concat(this.postOrder(node.right));
     }
     order.push(node.val);
     return order;
@@ -181,4 +184,4 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-module.exports = { Node, build, BinaryTree, BinarySearchTree };
+module.exports = { Node, buildLevels, BinaryTree, BinarySearchTree };

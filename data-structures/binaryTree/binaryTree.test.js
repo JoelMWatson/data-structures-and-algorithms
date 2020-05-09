@@ -1,6 +1,6 @@
 'use strict';
 
-const { build, BinaryTree, BinarySearchTree } = require('./tree');
+const { buildLevels, BinaryTree, BinarySearchTree } = require('./binaryTree');
 
 describe('Testing Binary Search Tree', () => {
   test('You can successfully instantiate an empty tree', () => {
@@ -10,13 +10,13 @@ describe('Testing Binary Search Tree', () => {
 
   test('You can successfully instantiate a tree and add a single root node', () => {
     const tree = new BinaryTree();
-    tree.root = build([5]);
+    tree.root = buildLevels([5]);
     expect(tree.isEmpty()).toBeFalsy();
   });
 
   test('You can successfully add a left and right child to a single root node', () => {
     const tree = new BinaryTree();
-    tree.root = build([5, 7, 10]);
+    tree.root = buildLevels([5, 7, 10]);
     expect([tree.root.val, tree.root.left.val, tree.root.right.val]).toEqual([
       5,
       7,
@@ -29,7 +29,7 @@ describe('Testing Binary Search Tree', () => {
     //     7    10
     //   8   3 6   2
     const tree = new BinaryTree();
-    tree.root = build([5, 7, 10, 8, 3, 6, 2]);
+    tree.root = buildLevels([5, 7, 10, 8, 3, 6, 2]);
     expect(tree.preOrder()).toEqual([5, 7, 8, 3, 10, 6, 2]);
   });
 
@@ -38,7 +38,7 @@ describe('Testing Binary Search Tree', () => {
     //     7    10
     //   8   3 6   2
     const tree = new BinaryTree();
-    tree.root = build([5, 7, 10, 8, 3, 6, 2]);
+    tree.root = buildLevels([5, 7, 10, 8, 3, 6, 2]);
     expect(tree.iterativePreOrder()).toEqual([5, 7, 8, 3, 10, 6, 2]);
   });
 
@@ -47,7 +47,7 @@ describe('Testing Binary Search Tree', () => {
     //     7    10
     //   8   3 6   2
     const tree = new BinaryTree();
-    tree.root = build([5, 7, 10, 8, 3, 6, 2]);
+    tree.root = buildLevels([5, 7, 10, 8, 3, 6, 2]);
     expect(tree.inOrder()).toEqual([8, 7, 3, 5, 6, 10, 2]);
   });
 
@@ -56,7 +56,7 @@ describe('Testing Binary Search Tree', () => {
     //     7    10
     //   8   3 6   2
     const tree = new BinaryTree();
-    tree.root = build([5, 7, 10, 8, 3, 6, 2]);
+    tree.root = buildLevels([5, 7, 10, 8, 3, 6, 2]);
     expect(tree.iterativeInOrder()).toEqual([8, 7, 3, 5, 6, 10, 2]);
   });
 
@@ -65,7 +65,7 @@ describe('Testing Binary Search Tree', () => {
     //     7    10
     //   8   3 6   2
     const tree = new BinaryTree();
-    tree.root = build([5, 7, 10, 8, 3, 6, 2]);
+    tree.root = buildLevels([5, 7, 10, 8, 3, 6, 2]);
     expect(tree.postOrder()).toEqual([8, 3, 7, 6, 2, 10, 5]);
   });
 
@@ -74,7 +74,7 @@ describe('Testing Binary Search Tree', () => {
     //     7    10
     //   8   3 6   2
     const tree = new BinaryTree();
-    tree.root = build([5, 7, 10, 8, 3, 6, 2]);
+    tree.root = buildLevels([5, 7, 10, 8, 3, 6, 2]);
     expect(tree.iterativePostOrder()).toEqual([8, 3, 7, 6, 2, 10, 5]);
   });
 });
