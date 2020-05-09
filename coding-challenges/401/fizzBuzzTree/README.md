@@ -23,4 +23,4 @@ fizzBuzzTree(tree): O(n)
 
 ## Solution
 
-![Whileboarding](#)
+![Whileboarding](https://raw.githubusercontent.com/JoelMWatson/data-structures-and-algorithms/fizzbuzz-tree/assets/coding-challenge-16.jpg)
