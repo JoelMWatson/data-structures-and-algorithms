@@ -6,6 +6,8 @@
 
 1. [Linked List](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures/linkedList)
 2. [Stack & Queue](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures/stacksAndQueues)
+3. [Binary Tree](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures/binaryTree)
+4. [K-ary Tree](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures/karyTree)
 
 - [Level 300 Challenges](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/301)
 
