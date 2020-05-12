@@ -59,6 +59,7 @@ class Queue {
     if (this.front) {
       const temp = this.front;
       this.front = this.front.next;
+      if (this.back === temp) this.back = null;
       return temp.val;
     }
     console.error('Empty Queue');
