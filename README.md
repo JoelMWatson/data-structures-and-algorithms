@@ -34,3 +34,4 @@
 4. [Linkedlist Merge](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/llMerge)
 5. [FIFO AnimalShelter](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/fifoAnimalShelter)
 6. [Breadth First](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/breadthFirst)
+7. [Find Max Binary Tree](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/findMaxBinaryTree)
