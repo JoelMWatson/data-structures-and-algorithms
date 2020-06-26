@@ -22,4 +22,4 @@ repeatedWord():
 
 ## Solution
 
-![Whileboarding](https://raw.githubusercontent.com/JoelMWatson/data-structures-and-algorithms/master/assets/coding-challenge-26.png)
+![Whileboarding](https://raw.githubusercontent.com/JoelMWatson/data-structures-and-algorithms/master/assets/coding-challenge-26.drawio.png)
