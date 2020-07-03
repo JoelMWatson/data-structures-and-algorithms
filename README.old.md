@@ -39,3 +39,4 @@
 9. [Merge Sort](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/mergeSort)
 10. [Quick Sort](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/quickSort)
 11. [Repeated Word](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/repeatedWord)
+12. [Tree Intersection](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/treeIntersection)
