@@ -38,11 +38,10 @@ describe('Testing Graph Behavior', () => {
     graph.addEdge('a', 'b');
     graph.addEdge('a', 'c');
     expect(graph.getNeighbors('a')).toStrictEqual([
-      { node: 'b', weight: 0 },
-      { node: 'c', weight: 0 },
+      { start: 'a', end: 'b', weight: 0 },
+      { start: 'a', end: 'c', weight: 0 },
     ]);
   });
-  // Neighbors are returned with the weight between nodes included tested above
 
   test('The proper size is returned, representing the number of nodes in the graph', () => {
     graph.addNode('a');
@@ -58,10 +57,64 @@ describe('Testing Graph Behavior', () => {
     graph.addNode('a');
     graph.addEdge('a', 'a');
     expect(graph.getNodes()).toStrictEqual(['a']);
-    expect(graph.getNeighbors('a')).toStrictEqual([{ node: 'a', weight: 0 }]);
+    expect(graph.getNeighbors('a')).toStrictEqual([
+      { start: 'a', end: 'a', weight: 0 },
+    ]);
   });
 
   test('An empty graph properly returns null', () => {
     expect(graph.getNodes()).toBeNull();
+  });
+
+  test('test out the Breadth First Traversal on connected graph', () => {
+    // nodes
+    graph.addNode('Pandora');
+    graph.addNode('Arendelle');
+    graph.addNode('Metroville');
+    graph.addNode('Monstroplolis');
+    graph.addNode('Naboo');
+    graph.addNode('Narnia');
+
+    // edges
+    graph.addEdge('Pandora', 'Arendelle');
+    graph.addEdge('Arendelle', 'Metroville');
+    graph.addEdge('Arendelle', 'Monstroplolis');
+    graph.addEdge('Metroville', 'Monstroplolis');
+    graph.addEdge('Metroville', 'Narnia');
+    graph.addEdge('Metroville', 'Naboo');
+    graph.addEdge('Monstroplolis', 'Naboo');
+    graph.addEdge('Naboo', 'Narnia');
+
+    expect(graph.breadthFirst('Pandora')).toStrictEqual([
+      'Pandora',
+      'Arendelle',
+      'Metroville',
+      'Monstroplolis',
+      'Narnia',
+      'Naboo',
+    ]);
+  });
+
+  test('test out the Breadth First Traversal on dense graph', () => {
+    // nodes
+    graph.addNode('Pandora');
+    graph.addNode('Arendelle');
+    graph.addNode('Metroville');
+    graph.addNode('Monstroplolis');
+    graph.addNode('Naboo');
+    graph.addNode('Narnia');
+
+    // edges
+    graph.addEdge('Pandora', 'Arendelle');
+    graph.addEdge('Metroville', 'Monstroplolis');
+    graph.addEdge('Metroville', 'Narnia');
+    graph.addEdge('Metroville', 'Naboo');
+    graph.addEdge('Monstroplolis', 'Naboo');
+    graph.addEdge('Naboo', 'Narnia');
+
+    expect(graph.breadthFirst('Pandora')).toStrictEqual([
+      'Pandora',
+      'Arendelle',
+    ]);
   });
 });
