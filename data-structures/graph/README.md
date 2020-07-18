@@ -11,6 +11,7 @@ The graph should be represented as an adjacency list, and should include the fol
 - GetNodes()
 - GetNeighbors()
 - Size()
+- breadthFirst()
 
 Write tests to prove the following functionality:
 
@@ -25,10 +26,11 @@ Write tests to prove the following functionality:
 
 ## Approach & Efficiency
 
-- AddNode():
-- AddEdge():
-- GetNodes():
-- GetNeighbors():
+- AddNode(): O(1)
+- AddEdge(): O(1)
+- GetNodes(): O(1)
+- GetNeighbors(): O(1)
+- GetNeighbors(): O(N^2)
 - Size(): O(1)
 
 ## API
