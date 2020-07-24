@@ -8,6 +8,8 @@
 2. [Stack & Queue](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures/stacksAndQueues)
 3. [Binary Tree](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures/binaryTree)
 4. [K-ary Tree](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures/karyTree)
+5. [Hashtable](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures/hashtable)
+6. [Graph](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/data-structures/graph)
 
 - [Level 300 Challenges](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/301)
 
@@ -40,3 +42,4 @@
 10. [Quick Sort](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/quickSort)
 11. [Repeated Word](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/repeatedWord)
 12. [Tree Intersection](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/treeIntersection)
+13. [Get Edge](https://github.com/JoelMWatson/data-structures-and-algorithms/tree/master/coding-challenges/401/getEdge)
